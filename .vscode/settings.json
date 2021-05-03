@@ -1,0 +1,11 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "levelup_server",
+            "database": "levelup.db"
+        }
+    ],
+    "python.pythonPath": "/home/sllittrell/.local/share/virtualenvs/levelup-XtkxkKRF/bin/python"
+}
