@@ -1,0 +1,22 @@
+[
+    {
+        "model": "levelupapi.game",
+        "pk": 1,
+        "fields": {
+            "category": 1,
+            "name": "Dragon Wood",
+            "max_players": 5,
+            "min_players": 2
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 2,
+        "fields": {
+            "category": 2,
+            "name": "Dungeons and Dragons",
+            "max_players": 10,
+            "min_players": 3
+        }
+    }
+]
