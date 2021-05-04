@@ -3,9 +3,10 @@
         {
             "previewLimit": 50,
             "driver": "SQLite",
-            "name": "levelup_server",
-            "database": "levelup.db"
+            "name": "lvlup-server",
+            "database": "db.sqlite3"
         }
     ],
-    "python.pythonPath": "/home/sllittrell/.local/share/virtualenvs/levelup-XtkxkKRF/bin/python"
+    "python.pythonPath": "/home/sllittrell/.local/share/virtualenvs/levelup-XtkxkKRF/bin/python",
+    "python.linting.pylintEnabled": true
 }
