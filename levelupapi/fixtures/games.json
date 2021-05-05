@@ -6,7 +6,8 @@
             "category": 1,
             "name": "Dragon Wood",
             "max_players": 5,
-            "min_players": 2
+            "min_players": 2,
+            "skill_level": 2
         }
     },
     {
@@ -16,7 +17,19 @@
             "category": 2,
             "name": "Dungeons and Dragons",
             "max_players": 10,
-            "min_players": 3
+            "min_players": 3,
+            "skill_level": 3
+        }
+    },
+    {
+        "model": "levelupapi.game",
+        "pk": 3,
+        "fields": {
+            "category": 1,
+            "name": "Settlers of Catan",
+            "max_players": 5,
+            "min_players": 2,
+            "skill_level": 4
         }
     }
 ]
