@@ -8,5 +8,8 @@
         }
     ],
     "python.pythonPath": "/home/sllittrell/.local/share/virtualenvs/levelup-XtkxkKRF/bin/python",
-    "python.linting.pylintEnabled": true
+    "python.linting.pylintEnabled": true,
+    "python.linting.pylintArgs": [
+        "--django-settings-module=levelup.settings",
+    ]
 }
