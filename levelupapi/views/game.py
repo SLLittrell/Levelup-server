@@ -26,17 +26,18 @@ class Games(ViewSet):
         # and set its properties from what was sent in the
         # body of the request from the client.
         game = Game()
-        game.name = request.data["name"]
-        game.min_players = request.data["minPlayers"]
-        game.max_players = request.data["maxPlayers"]
-        game.skill_level = request.data["skillLevel"]
+        game.title = request.data['title']
+        game.maker = request.data['maker']
+        game.number_of_players = request.data['numberOfPlayers']
+        game.skill_level = request.data['skillLevel']
+        game.gamer = gamer
     
 
         # Use the Django ORM to get the record from the database
         # whose `id` is what the client passed as the
         # `gameTypeId` in the body of the request.
         category = GameCategory.objects.get(pk=request.data["categoryId"])
-        game.category = category
+        game.game_category = category
 
         # Try to save the new game to the database, then
         # serialize the game instance as JSON, and send the
@@ -84,13 +85,14 @@ class Games(ViewSet):
         # creating a new instance of Game, get the game record
         # from the database whose primary key is `pk`
         game = Game.objects.get(pk=pk)
-        game.name = request.data["name"]
-        game.min_players = request.data["minPlayers"]
-        game.max_players = request.data["maxPlayers"]
-        game.skill_level = request.data["skillLevel"]
+        game.title = request.data['title']
+        game.maker = request.data['maker']
+        game.number_of_players = request.data['numberOfPlayers']
+        game.skill_level = request.data['skillLevel']
+        game.gamer = gamer
 
         category = GameCategory.objects.get(pk=request.data["categoryId"])
-        game.category = category
+        game.game_category = category
         game.save()
 
         # 204 status code means everything worked but the
@@ -144,5 +146,5 @@ class GameSerializer(serializers.ModelSerializer):
     """
     class Meta:
         model = Game
-        fields = ('id', 'name', 'max_players', 'min_players', 'skill_level', 'category')
+        fields = ('id', 'title', 'maker', 'number_of_players', 'skill_level', 'game_category', 'gamer')
         depth = 1
