@@ -3,23 +3,33 @@
         "model": "levelupapi.event",
         "pk": 1,
         "fields": {
-            "name": "Dragon Wood",
-            "date": "2021-05-04T14:48:00.000Z",
-            "location": "123 sesame street",
+            "organizer": 1,
+            "description": "Capture the Dragons",
             "game": 1,
-            "host": 1
-            
+            "date": "2021-10-04",
+            "time": "12:00"
         }
     },
     {
         "model": "levelupapi.event",
         "pk": 2,
         "fields": {
-            "name": "Dragon Wood",
-            "date": "2021-05-05T18:48:00.000Z",
-            "location": "456 pickup stix rd.",
+            "organizer": 1,
+            "description": "Friday night Settlers and drinks",
+            "game": 3,
+            "date": "2021-08-14",
+            "time": "19:30"
+        }
+    },
+    {
+        "model": "levelupapi.event",
+        "pk": 3,
+        "fields": {
+            "organizer": 1,
+            "description": "Vale of the Frost King campaign. All weekend.",
             "game": 2,
-            "host": 1
+            "date": "2021-04-20",
+            "time": "8:00"
         }
     }
 ]
