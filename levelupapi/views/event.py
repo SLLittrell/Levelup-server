@@ -102,13 +102,15 @@ class EventView(ViewSet):
 
         # Set the `joined` property on every event
         for event in events:
-            event.joined = None
+            event.joined = gamer in event.attendees.all()
 
-            try:
-                Attendee.objects.get(event=event, gamer=gamer)
-                event.joined = True
-            except Attendee().DoesNotExist:
-                event.joined = False
+            # Alternate way to do Many to Many with a join table model
+            # event.joined = None
+            # try:
+            #     Attendee.objects.get(event=event, gamer=gamer)
+            #     event.joined = True
+            # except Attendee().DoesNotExist:
+            #     event.joined = False
 
         # Support filtering events by game
         game = self.request.query_params.get('gameId', None)
@@ -212,4 +214,4 @@ class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
         fields = ('id', 'game', 'organizer',
-                  'description', 'date', 'time', 'joined')
+                  'description', 'date', 'time', 'joined', 'attendees')
